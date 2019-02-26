@@ -101,6 +101,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # Use dlmalloc instead of jemalloc for mallocs
 MALLOC_SVELTE := true
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)/releasetools
+
 # Seccomp
 BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp
 
