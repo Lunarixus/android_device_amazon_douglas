@@ -131,7 +131,7 @@ BLOCK_BASED_OTA := false
 TARGET_OTA_ASSERT_DEVICE := douglas
 
 # TWRP COMMON
-TARGET_RECOVERY_FSTAB := $(DEVICE_BASE)/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_BASE)/rootdir/etc/recovery.fstab
 BOARD_HAS_NO_SELECT_BUTTON := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone2/temp
 DEVICE_RESOLUTION := 800x1280
