@@ -124,6 +124,15 @@ USE_MINIKIN := true
 #Use dlmalloc instead of jemalloc for mallocs
 MALLOC_SVELTE := true
 
+# Shims
+LINKER_FORCED_SHIM_LIBS := \
+	/system/lib/libgui.so|libshim_gui.so \
+	/system/lib64/libgui.so|libshim_gui.so \
+	/system/lib/libaal.so|libshim_gui.so \
+	/system/lib64/libaal.so|libshim_gui.so \
+	/system/lib/liblog.so|libshim_log.so \
+	/system/lib64/liblog.so|libshim_log.so
+
 # OTA
 BLOCK_BASED_OTA := false
 TARGET_OTA_ASSERT_DEVICE := douglas
