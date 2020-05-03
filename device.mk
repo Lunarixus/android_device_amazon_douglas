@@ -135,6 +135,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     wpa_supplicant
 
+# Media Extractors
+BOARD_SECCOMP_POLICY := \
+    $(DEVICE_BASE)/seccomp-policy
+
 # DATE
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
