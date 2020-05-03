@@ -115,6 +115,10 @@ PRODUCT_PACKAGES += \
     libshim_log \
     libshim_gui
 
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    wpa_supplicant
+
 # DATE
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
