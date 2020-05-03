@@ -74,7 +74,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_BASE)/bluetooth
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
 
 # Graphics
-BOARD_EGL_CFG := $(DEVICE_BASE)/configs/egl.cfg
+BOARD_EGL_CFG := $(DEVICE_BASE)/configs/media/egl.cfg
 USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_OVERLAY := true

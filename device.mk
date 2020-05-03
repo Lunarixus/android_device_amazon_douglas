@@ -7,7 +7,7 @@ DEVICE_PACKAGE_OVERLAYS += $(DEVICE_BASE)/overlay
 
 # Install init.d scripts
 PRODUCT_COPY_FILES += \
-    $(DEVICE_BASE)/configs/99exfat-support:system/etc/init.d/99exfat-support
+    $(DEVICE_BASE)/configs/init.d/99exfat-support:system/etc/init.d/99exfat-support
 
 # Languages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -49,10 +49,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
-    $(DEVICE_BASE)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    $(DEVICE_BASE)/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    $(DEVICE_BASE)/configs/audio_device.xml:system/etc/audio_device.xml \
-    $(DEVICE_BASE)/configs/audio_policy.conf:system/vendor/etc/audio_policy.conf
+    $(DEVICE_BASE)/configs/media/media_codecs.xml:system/etc/media_codecs.xml \
+    $(DEVICE_BASE)/configs/media/media_profiles.xml:system/etc/media_profiles.xml \
+    $(DEVICE_BASE)/configs/audio/audio_device.xml:system/etc/audio_device.xml \
+    $(DEVICE_BASE)/configs/audio/audio_policy.conf:system/vendor/etc/audio_policy.conf
 
 # Audio
 PRODUCT_PACKAGES += \
