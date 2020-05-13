@@ -122,6 +122,10 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/ramdisk,root
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+
 # Zygote
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.zygote=zygote64_32
