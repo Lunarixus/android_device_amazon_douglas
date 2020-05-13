@@ -59,14 +59,14 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libaudioroute
 
-# OMX    
+# OMX
 PRODUCT_PACKAGES += \
     libdashplayer
 
 # Bluetooth
 PRODUCT_PACKAGES += \
     bluetooth.default
-	
+
 # Graphics
 PRODUCT_PACKAGES += \
     libion \
@@ -88,7 +88,7 @@ PRODUCT_PACKAGES += \
 # Network
 PRODUCT_PACKAGES += \
     netd
-    
+
 # IPv6 tethering
 PRODUCT_PACKAGES += \
     ebtables \
@@ -104,7 +104,7 @@ WITH_EXFAT := true
 # Remove packages
 PRODUCT_PACKAGES += \
     RemovePackages
-    
+
 # Audio Fix
 PRODUCT_PACKAGES += \
     audiofix \
