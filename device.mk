@@ -147,6 +147,10 @@ PRODUCT_PACKAGES += \
     audiofix \
     libaudio_shim
 
+# Wifi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service
+
 # DATE
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
