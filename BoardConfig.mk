@@ -153,6 +153,3 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_BASE)/recovery.fstab
 BOARD_HAS_NO_SELECT_BUTTON := true
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone2/temp
 DEVICE_RESOLUTION := 800x1280
-
-# Other stuff/MISC
-$(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
