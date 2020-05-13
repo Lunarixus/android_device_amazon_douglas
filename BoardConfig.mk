@@ -15,16 +15,14 @@
 # limitations under the License.
 #
 
-# Define local paths
-DEVICE_BASE := device/amazon/douglas
-DEVICE_VENDOR := vendor/amazon/douglas
-KERNEL_SOURCE := kernel/amazon/douglas
+# Define local path
+LOCAL_PATH := device/amazon/douglas
 
 # inherit from the proprietary version
 -include $(DEVICE_VENDOR)/BoardConfigVendor.mk
 
 # Mediatek Audio Headers
-TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_BASE)/include
+TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 # Board/Bootloader
 TARGET_BOARD_PLATFORM_GPU := mali-720mp2
@@ -100,13 +98,13 @@ USE_CAMERA_STUB := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_MTK := true
 BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_BASE)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
 
 # Graphics
-BOARD_EGL_CFG := $(DEVICE_BASE)/configs/egl.cfg
+BOARD_EGL_CFG := $(LOCAL_PATH)/configs/egl.cfg
 USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_OVERLAY := true
@@ -152,9 +150,3 @@ MALLOC_SVELTE := true
 # OTA
 BLOCK_BASED_OTA := false
 TARGET_OTA_ASSERT_DEVICE := douglas
-
-# TWRP COMMON
-TARGET_RECOVERY_FSTAB := $(DEVICE_BASE)/recovery.fstab
-BOARD_HAS_NO_SELECT_BUTTON := true
-TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone2/temp
-DEVICE_RESOLUTION := 800x1280

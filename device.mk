@@ -16,11 +16,10 @@
 #
 
 # Local Paths
-DEVICE_BASE := device/amazon/douglas
-DEVICE_VENDOR := /vendor/amazon/douglas
+LOCAL_PATH := device/amazon/douglas
 
 # Device overlay
-DEVICE_PACKAGE_OVERLAYS += $(DEVICE_BASE)/overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Languages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -53,10 +52,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:system/etc/media_codecs_google_video_le.xml \
-    $(DEVICE_BASE)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-    $(DEVICE_BASE)/configs/media_profiles.xml:system/etc/media_profiles.xml \
-    $(DEVICE_BASE)/configs/audio_device.xml:system/etc/audio_device.xml \
-    $(DEVICE_BASE)/configs/audio_policy.conf:system/vendor/etc/audio_policy.conf
+    $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml \
+    $(LOCAL_PATH)/configs/audio_device.xml:system/etc/audio_device.xml \
+    $(LOCAL_PATH)/configs/audio_policy.conf:system/vendor/etc/audio_policy.conf
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -150,6 +149,9 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service
+
+# Inherit proprietary MT8163 vendor
+$(call inherit-product, vendor/amazon/mt8163/mt8163-vendor.mk)
 
 # call dalvik heap config
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
