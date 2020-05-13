@@ -91,6 +91,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     libion \
     libgralloc_extra \
+    libGLES_android \
     libcap
 
 # Memtrack
