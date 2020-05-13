@@ -127,6 +127,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
 
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service \
+
 # Zygote
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.zygote=zygote64_32
