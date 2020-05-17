@@ -134,3 +134,6 @@ ro.mtk_bg_power_saving_ui=1
 ro.mtk_dual_mic_support=0
 ro.mtk_is_tablet=1
 ro.mtk_voice_extension_support=1
+
+# Disable sdcardfs
+ro.sys.sdcardfs=false
