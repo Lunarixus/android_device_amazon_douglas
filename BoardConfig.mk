@@ -98,6 +98,9 @@ MALLOC_SVELTE := true
 # Seccomp
 BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp
 
+# HIDL manifest
+DEVICE_MANIFEST_FILE += $(LOCAL_PATH)/manifest.xml
+
 # Wi-Fi
 BOARD_WLAN_DEVICE := MediaTek
 WPA_SUPPLICANT_VERSION := VER_0_8_X
