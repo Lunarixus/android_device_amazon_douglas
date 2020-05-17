@@ -136,7 +136,8 @@ PRODUCT_PACKAGES += \
 # Shims
 PRODUCT_PACKAGES += \
     libshim_atomic \
-    libshim_hwc
+    libshim_hwc \
+    libshim_liblog
 
 # USB
 PRODUCT_PACKAGES += \
