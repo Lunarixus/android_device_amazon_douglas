@@ -135,5 +135,13 @@ ro.mtk_dual_mic_support=0
 ro.mtk_is_tablet=1
 ro.mtk_voice_extension_support=1
 
+# Dalvik properties
+dalvik.vm.heapstartsize=5m
+dalvik.vm.heapgrowthlimit=128m
+dalvik.vm.heapsize=256m
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapmaxfree=2m
+
 # Disable sdcardfs
 ro.sys.sdcardfs=false
