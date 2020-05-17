@@ -95,6 +95,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # Use dlmalloc instead of jemalloc for mallocs
 MALLOC_SVELTE := true
 
+# Seccomp
+BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp
+
 # Wi-Fi
 BOARD_WLAN_DEVICE := MediaTek
 WPA_SUPPLICANT_VERSION := VER_0_8_X
