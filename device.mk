@@ -162,9 +162,21 @@ PRODUCT_PACKAGES += \
     audiofix \
     libaudio_shim
 
-# Wifi
+# WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service
+    android.hardware.wifi@1.0 \
+    android.hardware.wifi@1.0-impl \
+    android.hardware.wifi@1.0-service \
+    lib_driver_cmd_mt66xx \
+    libwifi-hal-mt66xx \
+    wifi_hal \
+    libwpa_client \
+    hostapd \
+    hostapd_cli \
+    dhcpcd.conf \
+    wificond \
+    wifilogd \
+    wpa_supplicant
 
 # Inherit proprietary MT8163 vendor
 $(call inherit-product, vendor/amazon/mt8163/mt8163-vendor.mk)
