@@ -28,6 +28,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 PRODUCT_AAPT_CONFIG := normal mdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
+# no RIL
+PRODUCT_PROPERTY_OVERRIDES += \
+    keyguard.no_require_sim=1 \
+    ro.radio.use-ppp=no \
+    ro.config.nocheckin=yes \
+    ro.radio.noril=1 \
+    ro.carrier=wifi-only \
+    persist.radio.noril=1
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/tablet_core_hardware.xml \
