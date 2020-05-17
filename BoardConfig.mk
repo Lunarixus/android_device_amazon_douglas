@@ -43,15 +43,13 @@ TARGET_CPU_SMP := true
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00000000 --ramdisk_offset 0x03400000 --second_offset 0x00e80000 --tags_offset 0x07f80000
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive androidboot.hardware=mt8163
 BOARD_KERNEL_BASE := 0x40080000
-BOARD_KERNEL_OFFSET := 0
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_FLASH_BLOCK_SIZE := 131072
+BOARD_CUSTOM_BOOTIMG_MK := device/amazon/douglas/mkbootimg.mk
+BOARD_MKBOOTIMG_ARGS := --cmdline "$(BOARD_KERNEL_CMDLINE)" --base 0x80000000 --pagesize 2048 --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --second_offset 0x00f00000 --tags_offset 0x00000100
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-
 TARGET_KERNEL_SOURCE := kernel/amazon/douglas
 TARGET_KERNEL_CONFIG := douglas_defconfig
 
@@ -92,6 +90,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1692925952
 BOARD_CACHEIMAGE_PARTITION_SIZE := 444596224
 BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Use dlmalloc instead of jemalloc for mallocs
 MALLOC_SVELTE := true
