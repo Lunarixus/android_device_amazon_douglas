@@ -145,3 +145,6 @@ dalvik.vm.heapmaxfree=2m
 
 # Disable sdcardfs
 ro.sys.sdcardfs=false
+
+# Default OMX service to non-Treble
+persist.media.treble_omx=false
