@@ -135,10 +135,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.zygote=zygote64_32
 
-# Remove packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-
 # Audio Fix
 PRODUCT_PACKAGES += \
     audiofix \
