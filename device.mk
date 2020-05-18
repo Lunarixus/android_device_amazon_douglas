@@ -152,10 +152,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service \
 
-# Zygote
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.zygote=zygote64_32
-
 # Audio Fix
 PRODUCT_PACKAGES += \
     audiofix \
